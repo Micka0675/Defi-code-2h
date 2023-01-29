@@ -1,5 +1,6 @@
 *{
     padding: 0;
+    margin: 0;
 }
 
 i{
@@ -8,10 +9,9 @@ i{
     
 }
 
-.rogue-leader{
+/* .rogue-leader{
     position: relative;
-    left: -5%;
-}
+} */
 
 h2{
     font-size: 38px;
@@ -27,28 +27,36 @@ p{
 body{
     /* font-family: 'Roboto Mono', monospace; */
     font-family: 'Roboto Flex', sans-serif;
+    width: 100%;
     height: 100vh;
     background-color: #060447;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     color: #FFF38A;
+    
 }
 
 .main{
     width: 80%;
     height: 80vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items:center;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .container{
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 80%;
+    flex-shrink: 0;
+    transition: 0.5s;
+    scroll-snap-align: start;
 }
 
 .left{
@@ -57,12 +65,14 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow-x: hidden;
 }
 
 
 .description{
     height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .bloc-date{
@@ -74,15 +84,14 @@ body{
 
 .bloc-date p{
     font-weight: bolder;
-    font-size: 170px;
+    font-size: 190px;
 }
 
 
 .right{
     width: 45%;
-    height: 100%;
     max-width: 500px;
-    
+    height: 100%;
 }
 
 .bloc-affiche1{
@@ -97,8 +106,8 @@ body{
 .bloc-affiche2{
     background-image: url('../images/back.jpg');
     background-size:900px;
-    background-position:top;
-    background-position-y: -10px;
+    background-position:center;
+    background-position-y: -250px;
     background-repeat: no-repeat;
     height: 100%;
 }
@@ -114,7 +123,7 @@ body{
 
 .nav-bar-carroussel{
     width: 100%;
-    height: 100%;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +162,7 @@ body{
 /* dynamic classlist */
 
 .effect{
-    animation: comesRight 0.3s forwards;
+    /* animation: comesRight 0.3s forwards; */
     position: relative;
 }
 
